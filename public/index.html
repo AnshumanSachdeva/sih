@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Living Monastery Cloud – Sikkim</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo"><i class="fas fa-pray"></i><span>Living Monastery Cloud</span></div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#monasteries">Monasteries</a></li>
+        <li><a href="#virtual-tour">Virtual Darshan</a></li>
+        <li><a href="#rituals">Digital Rituals</a></li>
+        <li><a href="#preservation">Preservation</a></li>
+      </ul>
+      <div class="header-controls">
+        <div class="language-switcher">
+          <select id="languageSelect">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+            <option value="ne">नेपाली</option>
+            <option value="bo">བོད་སྐད་</option>
+            <option value="zh">中文</option>
+          </select>
+        </div>
+        <div class="dark-mode-toggle">
+          <input type="checkbox" id="darkModeToggle" />
+          <label for="darkModeToggle" class="toggle-label">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+            <span class="toggle-ball"></span>
+          </label>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section id="home" class="mandala-hero">
+  <div class="mandala-container">
+    <div class="hero-text">
+      <h1>Living Monastery Cloud</h1>
+      <p>200+ ancient monasteries awakened as self-aware digital entities</p>
+    </div>
+    <div class="wheel-container">
+      <div class="prayer-wheel-nav">
+        <div class="mandala-ring ring-1"></div>
+        <div class="mandala-ring ring-2"></div>
+        <div class="mandala-ring ring-3"></div>
+        <div class="mandala-center" id="centerWheel">
+          <div class="spinning-wheel"></div>
+          <div class="center-text">Begin Journey</div>
+        </div>
+        <a href="#monasteries" class="nav-point point-1"><i class="fas fa-place-of-worship"></i><span>Monasteries</span></a>
+        <a href="#virtual-tour" class="nav-point point-2"><i class="fas fa-mountain"></i><span>Virtual Darshan</span></a>
+        <a href="#rituals" class="nav-point point-3"><i class="fas fa-spa"></i><span>Digital Rituals</span></a>
+        <a href="#preservation" class="nav-point point-4"><i class="fas fa-history"></i><span>Preservation</span></a>
+        <a href="#sentiment" class="nav-point point-5"><i class="fas fa-heart"></i><span>Emotional Aura</span></a>
+        <a href="#visit" class="nav-point point-6"><i class="fas fa-map-marked-alt"></i><span>Plan Visit</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sentiment" class="aura-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Emotional Aura of Sikkim</h2>
+      <p>Real-time spiritual energy flowing through monastery networks</p>
+    </div>
+    <div class="aura-map-container">
+      <div class="aura-map">
+        <div class="monastery-aura" data-monastery="rumtek">
+          <div class="aura-core"></div>
+          <div class="aura-ring peace"></div>
+          <div class="aura-ring devotion"></div>
+          <div class="aura-ring community"></div>
+          <div class="aura-label">Rumtek</div>
+        </div>
+        <div class="monastery-aura" data-monastery="pemayangtse">
+          <div class="aura-core"></div>
+          <div class="aura-ring peace"></div>
+          <div class="aura-ring devotion"></div>
+          <div class="aura-ring community"></div>
+          <div class="aura-label">Pemayangtse</div>
+        </div>
+        <div class="monastery-aura" data-monastery="tashiding">
+          <div class="aura-core"></div>
+          <div class="aura-ring peace"></div>
+          <div class="aura-ring devotion"></div>
+          <div class="aura-ring community"></div>
+          <div class="aura-label">Tashiding</div>
+        </div>
+      </div>
+      <div class="aura-legend">
+        <div class="legend-item"><div class="color peace"></div><span>Peace</span></div>
+        <div class="legend-item"><div class="color devotion"></div><span>Devotion</span></div>
+        <div class="legend-item"><div class="color community"></div><span>Community</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="monasteries" class="monasteries-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Sacred Monasteries of Sikkim</h2>
+      <p>Click any thangka scroll to begin digital dialogue</p>
+    </div>
+    <div class="thangka-grid" id="featuredGrid"></div>
+    <div class="explore-more-cell">
+      <button class="btn btn-explore-more" id="exploreMoreBtn">
+        <i class="fas fa-compass"></i> Explore All Sacred Spaces
+      </button>
+    </div>
+  </div>
+</section>
+
+<section id="rituals" class="rituals-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Digital Rituals & Meditation</h2>
+      <p>Experience guided spiritual practices from Himalayan tradition</p>
+    </div>
+    <div class="rituals-grid">
+      <div class="ritual-card" data-ritual="peace">
+        <div class="ritual-icon"><i class="fas fa-lotus"></i></div>
+        <h3>Peace Meditation</h3>
+        <p>7-minute guided meditation for inner calm</p>
+        <button class="btn ritual-start">Begin Practice</button>
+      </div>
+      <div class="ritual-card" data-ritual="healing">
+        <div class="ritual-icon"><i class="fas fa-hand-holding-heart"></i></div>
+        <h3>Healing Mantra</h3>
+        <p>Chanting session for emotional healing</p>
+        <button class="btn ritual-start">Begin Practice</button>
+      </div>
+      <div class="ritual-card" data-ritual="gratitude">
+        <div class="ritual-icon"><i class="fas fa-sun"></i></div>
+        <h3>Gratitude Practice</h3>
+        <p>Cultivate thankfulness through ancient methods</p>
+        <button class="btn ritual-start">Begin Practice</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="virtual-tour" class="virtual-darshan">
+  <div class="container">
+    <div class="section-title">
+      <h2>Virtual Darshan</h2>
+      <p>360° immersive experiences of sacred spaces</p>
+    </div>
+    <div class="darshan-container">
+      <div class="darshan-controls">
+        <select id="monasterySelect">
+          <option value="rumtek">Rumtek Monastery</option>
+          <option value="pemayangtse">Pemayangtse Monastery</option>
+          <option value="tashiding">Tashiding Monastery</option>
+        </select>
+        <button class="btn view-toggle" id="viewToggle">
+          <i class="fas fa-street-view"></i> Street View
+        </button>
+      </div>
+      <div class="darshan-view" id="darshanView">
+        <div class="loading-darshan">
+          <div class="prayer-wheel-loading"></div>
+          <p>Loading sacred space...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="preservation" class="preservation-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Digital Preservation</h2>
+      <p>AI-powered conservation of ancient wisdom</p>
+    </div>
+    <div class="preservation-grid">
+      <div class="preservation-card">
+        <div class="preservation-icon"><i class="fas fa-brain"></i></div>
+        <h3>AI Consciousness</h3>
+        <p>Each monastery remembers and evolves through digital memory</p>
+      </div>
+      <div class="preservation-card">
+        <div class="preservation-icon"><i class="fas fa-clock"></i></div>
+        <h3>Time Layers</h3>
+        <p>See architectural evolution across centuries</p>
+      </div>
+      <div class="preservation-card">
+        <div class="preservation-icon"><i class="fas fa-book"></i></div>
+        <h3>Wisdom Archive</h3>
+        <p>Digital library of teachings, rituals, and oral histories</p>
+      </div>
+      <div class="preservation-card" id="decayCard">
+        <div class="preservation-icon"><i class="fas fa-exclamation-triangle"></i></div>
+        <h3>Decay Prediction AI</h3>
+        <p id="decayText">Loading risk analysis…</p>
+        <div class="decay-meter">
+          <div class="decay-bar" id="decayBar"></div>
+          <span class="decay-percent" id="decayPercent"></span>
+        </div>
+        <small>Next assessment in <span id="nextCheck">30</span>s</small>
+      </div>
+      <div class="preservation-card">
+        <div class="preservation-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Cultural Protection</h3>
+        <p>AI monitoring for structural and cultural preservation</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="visit-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Plan Your Pilgrimage</h2>
+      <p>Respectful guidance for spiritual journeys</p>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <h3><i class="fas fa-calendar-alt"></i> Best Times</h3>
+        <p>March-June & Sept-Nov for pleasant weather and festivals</p>
+      </div>
+      <div class="visit-card">
+        <h3><i class="fas fa-hands"></i> Cultural Etiquette</h3>
+        <p>Dress modestly, remove shoes, ask before photography</p>
+      </div>
+      <div class="visit-card">
+        <h3><i class="fas fa-mountain"></i> Travel Tips</h3>
+        <p>Respect local customs, support community businesses</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3><i class="fas fa-pray"></i> Living Monastery Cloud</h3>
+        <p>Preserving Himalayan Buddhist heritage through respectful digital innovation</p>
+      </div>
+      <div class="footer-section">
+        <h3>Sacred Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#monasteries">Monasteries</a></li>
+          <li><a href="#rituals">Digital Rituals</a></li>
+          <li><a href="#preservation">Preservation</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>Email: blessings@livingmonastery.cloud</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>🙏 May all beings be happy. &copy; 2025 Living Monastery Cloud</p>
+    </div>
+  </div>
+</footer>
+
+<!-- MODALS -->
+<div class="modal" id="allMonasteriesModal">
+  <div class="modal-content">
+    <span class="close-modal" id="closeModal">&times;</span>
+    <div class="modal-header">
+      <h2>All Sacred Monasteries of Sikkim</h2>
+      <div class="search-box">
+        <input id="monasterySearch" placeholder="Search monasteries..."/>
+        <button id="searchBtn"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+    <div class="thangka-grid-large" id="monasteriesContainer"></div>
+  </div>
+</div>
+
+<div id="chatWindow" class="full-window">
+  <div class="window-header">
+    <button id="backFromChat" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Mandala</button>
+    <div class="window-title">Digital Dialogue</div>
+  </div>
+  <div class="window-body chat-layout">
+    <aside class="left-panel">
+      <div class="panel-header">Choose Monastery</div>
+      <ul class="monastery-list" id="monasteryListChat"></ul>
+      <div class="panel-footer">
+        <button id="openTimeTravelFromChat" class="btn time-travel-btn">
+          <i class="fas fa-clock"></i> Time Layers
+        </button>
+      </div>
+    </aside>
+    <main class="right-panel chat-main">
+      <div class="butter-lamp-chat">
+        <div class="flame-container">
+          <div class="butter-lamp"></div>
+          <div class="flame"></div>
+        </div>
+        <div class="chat-header" id="chatHeader">Choose a monastery to begin dialogue</div>
+        <div class="chat-body" id="chatBody">
+          <div class="chat-welcome">The butter lamp is lit. Your questions will rise like sacred smoke...</div>
+        </div>
+        <div class="chat-footer">
+          <div class="voice-controls">
+            <button id="startDictation" class="voice-btn" title="Speak Question">
+              <i class="fas fa-microphone"></i>
+            </button>
+            <button id="speakResponse" class="voice-btn" title="Hear Response">
+              <i class="fas fa-volume-up"></i>
+            </button>
+          </div>
+          <input id="chatInput" type="text" placeholder="Type your question with respect..."/>
+          <button id="sendBtn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<div id="timeWindow" class="full-window">
+  <div class="window-header">
+    <button id="backFromTime" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Mandala</button>
+    <div class="window-title">Temporal Layers</div>
+  </div>
+  <div class="window-body time-layout">
+    <aside class="left-panel">
+      <div class="panel-header">Select Monastery</div>
+      <ul class="monastery-list" id="monasteryListTime"></ul>
+      <div class="panel-footer time-controls">
+        <label class="year-label">Select Year: <span id="yearValue">1740</span></label>
+        <input type="range" id="yearSlider" min="1600" max="2200" value="1740" class="year-slider">
+        <button id="generateBtn" class="btn generate-btn">
+          <i class="fas fa-eye"></i> View This Era
+        </button>
+        <button id="openChatFromTime" class="btn btn-outline chat-btn">
+          <i class="fas fa-comments"></i> Digital Dialogue
+        </button>
+      </div>
+    </aside>
+    <main class="right-panel image-main" id="imagePanel">
+      <div class="time-placeholder">
+        <i class="fas fa-landmark"></i>
+        <p>Select monastery & year to view temporal layers</p>
+      </div>
+    </main>
+  </div>
+</div>
+
+<div id="ritualModal" class="modal">
+  <div class="modal-content ritual-modal">
+    <span class="close-modal" id="closeRitualModal">&times;</span>
+    <div class="ritual-interface" id="ritualInterface"></div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
